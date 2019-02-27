@@ -13,13 +13,6 @@ group :jekyll_plugins do
 end
 ```
 
-Add to your `_config.yml` file:
-
-```yml
-plugins:
-  gem 'jekyll-clean-descriptions'
-```
-
 And then execute:
 
     $ bundle
