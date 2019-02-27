@@ -1,15 +1,23 @@
 # Jekyll::Clean::Descriptions
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jekyll/clean/descriptions`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Use this to automatically create shorter descriptions based on the excerpt value.
+It will clean HTML, remove new lines, and truncate to 160 characters.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jekyll-clean-descriptions'
+group :jekyll_plugins do
+  gem 'jekyll-clean-descriptions'
+end
+```
+
+Add to your `_config.yml` file:
+
+```yml
+plugins:
+  gem 'jekyll-clean-descriptions'
 ```
 
 And then execute:
@@ -22,7 +30,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently none. Uses Jekyll Hooks to automatically shorten post excerpts and set
+a description variable for [jekyll-seo-tag]() and anything else that looks for
+`page.description` to be set.
 
 ## Development
 

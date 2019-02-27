@@ -10,16 +10,15 @@ module Jekyll
           @filters ||= Filters.new(Liquid::Context.new)
         end
 
-        def initialize()
+        def initialize
         end
 
         def call page
-          if not page.data["description"]
-            if page.data["excerpt"]
-              desc = cleanup(page.data["excerpt"])
-              if description and description.empty?
-                page.data["description"] = desc
-                puts desc
+          if @page.data['description']
+            if page.data['excerpt']
+              description = cleanup(page.data['excerpt'])
+              if description and !description.empty?
+                page.data['description'] = description
               end
             end
           end

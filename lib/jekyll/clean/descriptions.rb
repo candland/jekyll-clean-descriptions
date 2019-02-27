@@ -11,5 +11,5 @@ module Jekyll
 end
 
 Jekyll::Hooks.register :posts, :pre_render do |container, payload|
-  Jekyll::Clean::Descriptions::Cleaner.new(container).call
+  Jekyll::Clean::Descriptions::Cleaner.new.call(container)
 end
