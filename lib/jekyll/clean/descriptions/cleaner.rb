@@ -14,7 +14,7 @@ module Jekyll
         end
 
         def call page
-          if @page.data['description']
+          if !page.data['description']
             if page.data['excerpt']
               description = cleanup(page.data['excerpt'])
               if description and !description.empty?
